@@ -58,6 +58,8 @@
 // estagiario.primeiroNome = 'Leonardo'
 // console.log(estagiario.primeiroNome)
 
+////////////////// desafio 1
+
 class Moto {
 	velocidade: number;
 	constructor(public nome: string, velocidade: number) {
@@ -72,3 +74,54 @@ class Moto {
 		return (this.velocidade = this.velocidade + delta);
 	}
 }
+
+const moto = new Moto('Ducati', 120);
+moto.buzinar();
+console.log(moto.velocidade);
+moto.acelerar(30);
+console.log(moto.velocidade);
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////// desafio 2
+
+// Exercício 2 - Herança
+abstract class Objeto2D {
+	constructor(public base: number = 0, public altura: number = 0) {}
+
+	abstract area(): number;
+}
+
+class Retangulo extends Objeto2D {
+	area(): number {
+		return this.base * this.altura;
+	}
+}
+
+const retangulo = new Retangulo(5, 7);
+retangulo.base = 10;
+console.log(retangulo.area());
+
+//////////////////////////////////////////////////////
+
+////////////// desafio 3
+
+// // Exercício 3 - Getters & Setters
+class Estagiario {
+	private _primeiroNome: string = '';
+
+	get primeiroNome(): string {
+		return this._primeiroNome;
+	}
+
+	set primeiroNome(valor: string) {
+		this._primeiroNome = valor.length >= 3 ? valor : '';
+	}
+}
+const estagiario = new Estagiario();
+
+console.log(estagiario.primeiroNome);
+estagiario.primeiroNome = 'Le';
+console.log(estagiario.primeiroNome);
+estagiario.primeiroNome = 'Leonardo';
+console.log(estagiario.primeiroNome);
