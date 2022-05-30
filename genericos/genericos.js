@@ -10,8 +10,8 @@ function echoMelhorado(objeto) {
     return objeto;
 }
 console.log(echoMelhorado('João').length);
-console.log(echoMelhorado(27).length);
-console.log(echoMelhorado(18).length);
+// console.log(echoMelhorado(27).length);
+// console.log(echoMelhorado<number>(18).length);
 console.log(echoMelhorado('Miguel').length);
 // generics
 // const avaliacoes: array = [10, 9.3, 7.7]; // problema

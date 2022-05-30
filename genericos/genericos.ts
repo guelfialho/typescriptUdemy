@@ -13,8 +13,8 @@ function echoMelhorado<T>(objeto: T): T {
 }
 
 console.log(echoMelhorado('João').length);
-console.log(echoMelhorado(27).length);
-console.log(echoMelhorado<number>(18).length);
+// console.log(echoMelhorado(27).length);
+// console.log(echoMelhorado<number>(18).length);
 console.log(echoMelhorado<string>('Miguel').length);
 
 // generics
