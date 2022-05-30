@@ -45,3 +45,16 @@ meuCliente.saudar('Solo');
 console.log(meuCliente.ultimaCompra);
 
 /// interface Função
+interface FuncaoCalculo {
+	(a: number, b: number): number;
+}
+
+let potencia: FuncaoCalculo;
+
+potencia = function (base: number, exp: number): number {
+	return Array(exp)
+		.fill(base)
+		.reduce((before, after) => before * after);
+};
+
+console.log(potencia(2, 3));

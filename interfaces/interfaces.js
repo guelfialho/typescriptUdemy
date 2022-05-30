@@ -30,4 +30,10 @@ meuCliente.nome = 'Han';
 saudarComOla(meuCliente);
 meuCliente.saudar('Solo');
 console.log(meuCliente.ultimaCompra);
-/// interface Função
+let potencia;
+potencia = function (base, exp) {
+    return Array(exp)
+        .fill(base)
+        .reduce((before, after) => before * after);
+};
+console.log(potencia(2, 3));
